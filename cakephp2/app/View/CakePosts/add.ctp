@@ -1,7 +1,6 @@
-<h1>Add Post</h1>
-<?php
-echo $this->Form->create('CakePost');
-echo $this->Form->input('title');
-echo $this->Form->input('body', array('rows' => '3'));
-echo $this->Form->end('Save Post');
-?>
+<h1 align=center>新規投稿</h1>
+<?= $this->Form->create('CakePost'); ?>
+<?= $this->Form->input('title', array('label' => 'タイトル')); ?>
+<?= $this->Form->input('body', array('rows' => '3', 'label' => '本文')); ?>
+<?= $this->Form->end('投稿する'); ?>
+<p><?= $this->Html->link('投稿一覧へ戻る', array('action' => 'index')); ?></p>

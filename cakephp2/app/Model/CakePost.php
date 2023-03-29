@@ -1,5 +1,6 @@
 <?php
 class CakePost extends AppModel {
+
 	public $validate = array(
 		'title' => array(
 			'rule' => 'notBlank'
@@ -8,5 +9,7 @@ class CakePost extends AppModel {
 			'rule' => 'notBlank'
 		)
 	);
+
+	public $belongsTo = array('User');
 }
 ?>
